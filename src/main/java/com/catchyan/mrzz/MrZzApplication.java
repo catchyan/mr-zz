@@ -47,12 +47,15 @@ public class MrZzApplication {
         request.setModel(MODEL);
         request.setMessages(new ArrayList<CreateCompletionRequest.Message>(){{add(new CreateCompletionRequest.Message("user", message));}});
 
+        String body = JSONUtil.toJsonStr(request);
         String result = HttpRequest.post(URL)
                 .header("Authorization", "Bearer " + API_KEY)
 //                .setHttpProxy("127.0.0.1", 7890)
-                .body(JSONUtil.toJsonStr(request))
+                .body(body)
                 .execute()
                 .body();
+        System.out.println("body is " + body);
+        System.out.println("result is " + result);
         List<CreateCompletionResponse.ChoicesItem> choicesItemList = JSONUtil.toBean(result, CreateCompletionResponse.class).getChoices();
         return choicesItemList.stream()
                 .map(CreateCompletionResponse.ChoicesItem::getMessage)
