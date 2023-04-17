@@ -1,6 +1,6 @@
 openai:
   # OPENAI API-KEY
-  api-key: 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
+  api-key: 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
   # MODEL
   model: gpt-3.5-turbo
   # URL
