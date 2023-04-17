@@ -49,7 +49,7 @@ public class MrZzApplication {
 
         String result = HttpRequest.post(URL)
                 .header("Authorization", "Bearer " + API_KEY)
-                .setHttpProxy("127.0.0.1", 7890)
+//                .setHttpProxy("127.0.0.1", 7890)
                 .body(JSONUtil.toJsonStr(request))
                 .execute()
                 .body();

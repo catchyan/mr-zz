@@ -65,7 +65,6 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.catchyan.mrzz.MrZzApplication</mainClass>
-                    <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>
                     <execution>
