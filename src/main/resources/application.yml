@@ -1,8 +1,8 @@
 openai:
   # OPENAI API-KEY
-  api-key: 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
+  api-key: ${OPENAI_API_KEY:你的apiKey}
   # MODEL
-  model: gpt-3.5-turbo
+  model: ${OPENAI_MODEL:gpt-3.5-turbo}
   # URL
   url: https://api.openai.com/v1/chat/completions
 user:
