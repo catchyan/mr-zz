@@ -1,0 +1,10 @@
+openai:
+  # OPENAI API-KEY
+  api-key: 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
+  # MODEL
+  model: gpt-3.5-turbo
+  # URL
+  url: https://api.openai.com/v1/chat/completions
+user:
+  # 赠送给用户的免费提问次数
+  free-ask-count: 5
